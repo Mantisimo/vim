@@ -1,5 +1,19 @@
 set nocompatible
-set runtimepath+=./
+"set runtimepath+=./
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+          \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+if empty(glob('~/.vim/colors/molokai.vim'))
+    silent !curl -fLo ~/.vim/colors/molokai.vim --create-dirs
+          \ https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim 
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+
+
 " Colors {{{
 syntax enable           " enable syntax processing
 colorscheme molokai
