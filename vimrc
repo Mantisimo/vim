@@ -1,4 +1,5 @@
-
+set nocompatible
+set runtimepath+=./
 " Colors {{{
 syntax enable           " enable syntax processing
 colorscheme molokai
@@ -43,9 +44,10 @@ set foldlevelstart=10    " start with fold level of 1
 " Vim-plug {{{
 call plug#begin()
 Plug 'scrooloose/nerdtree'
-Plug 'kien/ctrlp.vim'
-Plug 'bling/vim-airline'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/syntastic'
 call plug#end()
 " }}}
-
+let g:airline_theme='simple'
