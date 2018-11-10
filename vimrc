@@ -65,6 +65,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/syntastic'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'leafgarland/typescript-vim'
+Plug 'terryma/vim-multiple-cursors'
 call plug#end()
 " }}}
 let g:airline_theme='simple'
@@ -75,6 +76,20 @@ autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
 autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
-
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>
+" Ignores fuzzy searching of node_modules and git folders
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+" Multi_cursor {{{
+let g:multi_cursor_use_default_mapping=0
+    " Default mapping
+let g:multi_cursor_start_word_key      = '<C-j>'
+let g:multi_cursor_select_all_word_key = '<A-j>'
+let g:multi_cursor_start_key           = 'g<C-j>'
+let g:multi_cursor_select_all_key      = 'g<A-j>'
+let g:multi_cursor_next_key            = '<C-j>'
+let g:multi_cursor_prev_key            = '<C-p>'
+let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
+" }}}
