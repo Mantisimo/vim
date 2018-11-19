@@ -67,7 +67,15 @@ Plug 'maksimr/vim-jsbeautify'
 Plug 'leafgarland/typescript-vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mattn/emmet-vim'
+if has('nvim')
+      Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+      Plug 'Shougo/deoplete.nvim'
+      Plug 'roxma/nvim-yarp'
+      Plug 'roxma/vim-hug-neovim-rpc'
+endif
 call plug#end()
+let g:deoplete#enable_at_startup = 1
 " }}}
 let g:airline_theme='simple'
 map <silent> <C-n> :NERDTreeToggle<CR>
