@@ -1,0 +1,17 @@
+;.editorconfig
+
+root = true
+
+[**.js]
+indent_style = space
+indent_size = 2
+brace_style = collapse-preserve-inline
+max_preserve_newlines = 2
+preserve_newlines = true
+
+[**.ts]
+indent_style = space
+indent_size = 2
+brace_style = collapse-preserve-inline
+max_preserve_newlines = 2
+preserve_newlines = true
