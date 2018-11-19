@@ -66,11 +66,13 @@ Plug 'scrooloose/syntastic'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'leafgarland/typescript-vim'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'mattn/emmet-vim'
 call plug#end()
 " }}}
 let g:airline_theme='simple'
 map <silent> <C-n> :NERDTreeToggle<CR>
 map <c-f> :call JsBeautify()<cr>
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
 autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
