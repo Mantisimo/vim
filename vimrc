@@ -84,11 +84,15 @@ Plug 'leafgarland/typescript-vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mattn/emmet-vim'
 if has('nvim')
-      Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
-      Plug 'Shougo/deoplete.nvim'
-      Plug 'roxma/nvim-yarp'
-      Plug 'roxma/vim-hug-neovim-rpc'
+	Plug 'HerringtonDarkholme/yats.vim'
+	Plug 'mhartington/nvim-typescript', {'do': './install.sh'} 
+	Plug 'Shougo/deoplete.nvim'
+	Plug 'roxma/vim-hug-neovim-rpc'
+	Plug 'roxma/nvim-yarp'
+	" For Denite features
+	Plug 'Shougo/denite.nvim'
 endif
 call plug#end()
 let g:deoplete#enable_at_startup = 1
