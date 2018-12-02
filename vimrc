@@ -22,6 +22,8 @@ colorscheme molokai
 " Misc {{{
 set ttyfast                     " faster redraw
 set backspace=indent,eol,start
+set hidden
+
 set clipboard+=unnamed
 " }}}
 " Spaces & Tabs {{{
@@ -68,7 +70,7 @@ command -nargs=0 -bar Update if &modified
                            \|endif
 nnoremap <silent> <C-S> :<C-u>Update<CR>
 inoremap <c-s> <c-o>:Update<CR>
-inoremap <c-s> <c-o>:Update<CR><CR>
+inoremap <c-s> <c-o>:Update<CR>
 " }}}
 
 
@@ -83,24 +85,13 @@ Plug 'maksimr/vim-jsbeautify'
 Plug 'leafgarland/typescript-vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mattn/emmet-vim'
-if has('nvim')
-	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-	Plug 'HerringtonDarkholme/yats.vim'
-	Plug 'mhartington/nvim-typescript', {'do': './install.sh'} 
-	Plug 'Shougo/deoplete.nvim'
-	Plug 'roxma/vim-hug-neovim-rpc'
-	Plug 'roxma/nvim-yarp'
-	" For Denite features
-	Plug 'Shougo/denite.nvim'
-endif
+Plug 'Valloric/YouCompleteMe'
 call plug#end()
-let g:deoplete#enable_at_startup = 1
 " }}}
+
 let g:airline_theme='simple'
 map <silent> <C-n> :NERDTreeToggle<CR>
 map <c-f> :call JsBeautify()<cr>
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
 autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
@@ -132,3 +123,7 @@ inoremap ˚ <Esc>:m .-2<CR>==gi
 vnoremap ∆ :m '>+1<CR>gv=gv
 vnoremap ˚ :m '<-2<CR>gv=gv
 " }}}
+"
+set completeopt-=preview
+" For html tags it auto adds htmlend tags
+inoremap <buffer> > ></<C-x><C-o><C-y><C-o>%<CR><C-o>O
