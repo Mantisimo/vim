@@ -23,7 +23,7 @@ colorscheme molokai
 set ttyfast                     " faster redraw
 set backspace=indent,eol,start
 set hidden
-
+set cursorline
 set clipboard+=unnamed
 " }}}
 " Spaces & Tabs {{{
@@ -39,7 +39,7 @@ set autoindent
 " UI Layout {{{
 set number              " show line numbers
 set showcmd             " show command in bottom bar
-set nocursorline          " highlight current line
+"set nocursorline          " highlight current line
 set wildmenu
 "set lazyredraw
 set showmatch           " higlight matching parenthesis
@@ -86,12 +86,16 @@ Plug 'leafgarland/typescript-vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mattn/emmet-vim'
 Plug 'Valloric/YouCompleteMe'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 " }}}
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='simple'
+let g:airline#extensions#hunks#enabled=0
+let g:airline#extensions#branch#enabled=1
+
 map <silent> <C-n> :NERDTreeToggle<CR>
 map <c-f> :call JsBeautify()<cr>
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
