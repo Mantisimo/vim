@@ -15,6 +15,10 @@ endif
 
 
 
+
+
+set ttimeoutlen=0
+
 " Colors {{{
 syntax enable           " enable syntax processing
 colorscheme molokai
