@@ -108,6 +108,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'mattn/emmet-vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'tpope/vim-fugitive'
+Plug 'quramy/tsuquyomi'
 Plug 'ervandew/supertab'
 call plug#end()
 " }}}
