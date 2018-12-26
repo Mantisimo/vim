@@ -109,15 +109,17 @@ Plug 'mattn/emmet-vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'tpope/vim-fugitive'
 Plug 'quramy/tsuquyomi'
+Plug 'enricobacis/vim-airline-clock'
 Plug 'ervandew/supertab'
 call plug#end()
 " }}}
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='simple'
+let g:airline_theme='dark'
 let g:airline#extensions#hunks#enabled=0
 let g:airline#extensions#branch#enabled=1
+let g:airline#extensions#syntastic#enabled = 1
 
 map <silent> <C-n> :NERDTreeToggle<CR>
 map <c-f> :call JsBeautify()<cr>
