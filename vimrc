@@ -158,3 +158,9 @@ vnoremap ˚ :m '<-2<CR>gv=gv
 set completeopt-=preview
 " For html tags it auto adds htmlend tags
 inoremap <buffer> > ></<C-x><C-o><C-y><C-o>%<CR><C-o>O
+
+
+" tab shortcuts {{{
+nnoremap tn :tabnew<CR>
+nnoremap tq :tabclose><CR>
+" }}}
