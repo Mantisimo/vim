@@ -115,6 +115,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
+Plug 'AndrewRadev/linediff.vim'
 call plug#end()
 " }}}
 
