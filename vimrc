@@ -112,6 +112,7 @@ Plug 'quramy/tsuquyomi'
 Plug 'enricobacis/vim-airline-clock'
 Plug 'ervandew/supertab'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'skywind3000/asyncrun.vim'
 call plug#end()
 " }}}
 
@@ -121,6 +122,8 @@ let g:airline_theme='dark'
 let g:airline#extensions#hunks#enabled=0
 let g:airline#extensions#branch#enabled=1
 let g:airline#extensions#syntastic#enabled = 1
+
+let g:asyncrun_open = 8
 
 map <silent> <C-n> :NERDTreeToggle<CR>
 map <c-f> :call JsBeautify()<cr>
