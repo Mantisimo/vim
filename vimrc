@@ -111,6 +111,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'quramy/tsuquyomi'
 Plug 'enricobacis/vim-airline-clock'
 Plug 'ervandew/supertab'
+Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
 " }}}
 
