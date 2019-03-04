@@ -120,6 +120,9 @@ Plug 'tpope/vim-surround'
 call plug#end()
 " }}}
 
+" Plugin settings 
+let g:gutentags_cache_dir       = './.git'
+
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='dark'
