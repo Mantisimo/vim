@@ -174,3 +174,10 @@ inoremap <buffer> > ></<C-x><C-o><C-y><C-o>%<CR><C-o>O
 nnoremap tn :tabnew<CR>
 nnoremap tq :tabclose><CR>
 " }}}
+
+" Store temporary files in a central spot {{{
+  let vimtmp = $HOME . '/.tmp/' . getpid()
+  silent! call mkdir(vimtmp, "p", 0700)
+  let &backupdir=vimtmp
+  let &directory=vimtmp
+" }}}
