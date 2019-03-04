@@ -123,6 +123,13 @@ call plug#end()
 " Plugin settings 
 let g:gutentags_cache_dir       = './.git'
 
+command! -bang -nargs=* GGrep
+  \ call fzf#vim#grep(
+  \   'git grep -i --line-number '.shellescape(<q-args>), 0,
+  \   { 'dir': systemlist('git rev-parse --show-toplevel')[0] }, <bang>0)
+
+map <leader>f :GGrep<CR>
+
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='dark'
