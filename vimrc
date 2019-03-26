@@ -117,7 +117,9 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'AndrewRadev/linediff.vim'
 Plug 'tpope/vim-surround'
+Plug 'TaDaa/vimade'
 call plug#end()
+
 " }}}
 
 " Plugin settings 
@@ -191,3 +193,7 @@ nnoremap tq :tabclose><CR>
   let &backupdir=vimtmp
   let &directory=vimtmp
 " }}}
+
+
+let g:vimade = {}
+let g:vimade.fadelevel = 0.9
