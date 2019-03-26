@@ -197,3 +197,5 @@ nnoremap tq :tabclose><CR>
 
 let g:vimade = {}
 let g:vimade.fadelevel = 0.9
+
+set mouse=a
