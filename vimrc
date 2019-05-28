@@ -123,7 +123,6 @@ call plug#end()
 " }}}
 
 " Plugin settings 
-let g:gutentags_cache_dir       = './.git'
 
 command! -bang -nargs=* GGrep
   \ call fzf#vim#grep(
@@ -152,6 +151,7 @@ autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 " Ignores fuzzy searching of node_modules and git folders
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_extensions = ['tag']
 " CTRLP Search for tags
 nnoremap <leader>. :CtrlPTag<cr>
 
@@ -192,6 +192,7 @@ nnoremap tq :tabclose><CR>
   silent! call mkdir(vimtmp, "p", 0700)
   let &backupdir=vimtmp
   let &directory=vimtmp
+  let g:gutentags_cache_dir=vimtmp
 " }}}
 
 
