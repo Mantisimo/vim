@@ -201,3 +201,7 @@ command! -bang -nargs=* GGrep
   \   { 'dir': getcwd() }, <bang>0)
 
 map <leader>f :GGrep<CR>
+map <leader>rl :source $MYVIMRC<CR>
+map <leader>ev :e $MYVIMRC<CR>
+map <leader>s :w<CR>
+"Save all a
