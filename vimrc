@@ -124,12 +124,6 @@ call plug#end()
 
 " Plugin settings 
 
-command! -bang -nargs=* GGrep
-  \ call fzf#vim#grep(
-  \   'git grep -i --line-number '.shellescape(<q-args>), 0,
-  \   { 'dir': systemlist('git rev-parse --show-toplevel')[0] }, <bang>0)
-
-map <leader>f :GGrep<CR>
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -200,3 +194,10 @@ let g:vimade = {}
 let g:vimade.fadelevel = 0.9
 
 set mouse=a
+
+command! -bang -nargs=* GGrep
+  \ call fzf#vim#grep(
+  \   ('git grep -i --line-number '.(isdirectory(expand(".git"))?'--untracked ':'--no-index ')).shellescape(<q-args>), 0,
+  \   { 'dir': getcwd() }, <bang>0)
+
+map <leader>f :GGrep<CR>
