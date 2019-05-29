@@ -134,7 +134,8 @@ let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:asyncrun_open = 8
 
-map <silent> <C-n> :NERDTreeToggle<CR>
+map <leader>n :NERDTreeToggle<CR>
+map <silent> <C-n> :NERDTreeFocus<CR>
 map <c-f> :call JsBeautify()<cr>
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
