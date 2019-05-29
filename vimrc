@@ -208,3 +208,18 @@ map <leader>s :w<CR>
 map <leader>t :below term<CR>
 tnoremap <Esc> <C-w><C-p>
 "Save all a
+
+let g:vimade = {
+  \ "normalid": '',
+  \ "normalncid": '',
+  \ "basefg": '',
+  \ "basebg": '',
+  \ "fadelevel": 0.4,
+  \ "colbufsize": 15,
+  \ "rowbufsize": 15,
+  \ "checkinterval": 100, 
+  \ "usecursorhold": 0,
+  \ "detecttermcolors": 1,
+  \ 'enablesigns': 0,
+  \ 'signsretentionperiod': 4000
+  \}
