@@ -205,4 +205,6 @@ map <leader>f :GGrep<CR>
 map <leader>rl :source $MYVIMRC<CR>
 map <leader>ev :e $MYVIMRC<CR>
 map <leader>s :w<CR>
+map <leader>t :below term<CR>
+tnoremap <Esc> <C-w><C-p>
 "Save all a
