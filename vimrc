@@ -207,6 +207,16 @@ map <leader>rl :source $MYVIMRC<CR>
 map <leader>ev :e $MYVIMRC<CR>
 map <leader>s :w<CR>
 tnoremap <Esc> <C-w><C-p>
+"shift alt + greater less than keys
+tnoremap ¯ : tabprevious<cr>
+tnoremap ˘ : tabnext<cr>
+nnoremap ¯ : tabprevious<cr>
+nnoremap ˘ : tabnext<cr>
+"alt + greater less than keys
+tnoremap ≤ : <C-\><C-n>bp<cr>
+tnoremap ≥ : <C-\><C-n>bn<cr>
+nnoremap ≤ : bp<cr>
+nnoremap ≥ : bn<cr>
 tnoremap <silent> <leader>t <C-w><C-p>:ToggleTerminal<CR>
 nnoremap <silent> <leader>t : ToggleTerminal<CR>
 " set your favorite shell
