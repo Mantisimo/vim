@@ -219,9 +219,10 @@ command! -bang -nargs=* GGrep
 
 map <leader>f :GGrep<CR>
 map <leader>rl :source $MYVIMRC<CR>
-map <leader>ev :e $MYVIMRC<CR>
+map <leader>ev :e $MYVIMRC<CR>$gf
 map <leader>s :w<CR>
 tnoremap <esc>  <C-w><C-p>
+"tnoremap <esc>: <c-\><c-n>:
 tnoremap <esc>: <C-w><C-p>
 "shift alt + greater less than keys
 tnoremap ¯ : tabprevious<cr>
@@ -235,6 +236,8 @@ nnoremap ≤ : bp<cr>
 nnoremap ≥ : bn<cr>
 tnoremap <silent> <leader>t <C-w><C-p>:ToggleTerminal<CR>
 nnoremap <silent> <leader>t : ToggleTerminal<CR>
+nnoremap <esc><esc>: <c-w><c-p>
+nnoremap rt : rightb vert term<cr>
 " set your favorite shell
 let g:toggle_terminal#command = ''
 
