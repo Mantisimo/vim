@@ -1,5 +1,7 @@
 let mapleader = ","
 set nocompatible
+"map escape key to jj 
+imap jj <Esc>
 "set runtimepath+=./
 set t_Co=256
 if empty(glob('~/.vim/autoload/plug.vim'))
