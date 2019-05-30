@@ -118,6 +118,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'AndrewRadev/linediff.vim'
 Plug 'tpope/vim-surround'
 Plug 'TaDaa/vimade'
+Plug 'pakutoma/toggle-terminal'
 call plug#end()
 
 " }}}
@@ -205,9 +206,11 @@ map <leader>f :GGrep<CR>
 map <leader>rl :source $MYVIMRC<CR>
 map <leader>ev :e $MYVIMRC<CR>
 map <leader>s :w<CR>
-map <leader>t :below term<CR>
 tnoremap <Esc> <C-w><C-p>
-"Save all a
+tnoremap <silent> <leader>t <C-w><C-p>:ToggleTerminal<CR>
+nnoremap <silent> <leader>t : ToggleTerminal<CR>
+" set your favorite shell
+let g:toggle_terminal#command = ''
 
 let g:vimade = {
   \ "normalid": '',
