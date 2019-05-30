@@ -1,3 +1,4 @@
+let mapleader = ","
 set nocompatible
 "set runtimepath+=./
 set t_Co=256
