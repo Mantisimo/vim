@@ -17,7 +17,7 @@ endif
 
 
 
-set ttimeoutlen=0
+set ttimeoutlen=50
 
 " Colors {{{
 syntax enable           " enable syntax processing
@@ -206,7 +206,8 @@ map <leader>f :GGrep<CR>
 map <leader>rl :source $MYVIMRC<CR>
 map <leader>ev :e $MYVIMRC<CR>
 map <leader>s :w<CR>
-tnoremap <Esc> <C-w><C-p>
+tnoremap <esc>  <C-w><C-p>
+tnoremap <esc>: <C-w><C-p>
 "shift alt + greater less than keys
 tnoremap ¯ : tabprevious<cr>
 tnoremap ˘ : tabnext<cr>
