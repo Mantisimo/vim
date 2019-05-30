@@ -17,7 +17,11 @@ if empty(glob('~/.vim/colors/molokai.vim'))
 endif
 
 
-
+"stop myself from using arrow keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
 
 
 set ttimeoutlen=50
