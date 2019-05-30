@@ -46,6 +46,8 @@ set modelines=1
 filetype indent on
 filetype plugin on
 set autoindent
+set visualbell           " don't beep
+set noerrorbells         " don't beep
 " }}}
 " UI Layout {{{
 set number              " show line numbers
@@ -68,7 +70,8 @@ set foldenable          " don't fold files by default on open
 nnoremap <space> za
 set foldlevelstart=10    " start with fold level of 1
 " }}}
-
+set splitbelow
+set splitright
 " Shortcuts {{{
 " If the current buffer has never been saved, it will have no name,
 " call the file browser to save it, otherwise just save it.
