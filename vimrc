@@ -266,3 +266,5 @@ let g:vimade = {
   \ 'enablesigns': 0,
   \ 'signsretentionperiod': 4000
   \}
+
+autocmd TerminalOpen * if bufwinnr('') > 0 | setlocal nobuflisted | endif
