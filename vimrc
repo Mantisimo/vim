@@ -82,11 +82,11 @@ command! -nargs=0 -bar Update if &modified
                            \|        confirm write
                            \|    endif
                            \|endif
-nnoremap <silent> <C-S> :<C-u>Update<CR>
-inoremap <c-s> <c-o>:Update<CR>
-inoremap <c-s> <c-o>:Update<CR>
+nnoremap <C-s> :<C-u>Update<CR>
+inoremap <C-s> <C-o>:Update<CR>
+inoremap <C-s> <C-o>:Update<CR>
 " }}}
-
+"
 "You complete me setting
 " http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
 set completeopt=longest,menuone
