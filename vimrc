@@ -154,7 +154,7 @@ autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 " <Ctrl-l> redraws the screen and removes any search highlighting.
-map <esc> :noh<cr>
+map <silent> <esc> :noh<cr>
 " Ignores fuzzy searching of node_modules and git folders
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:ctrlp_extensions = ['tag']
@@ -186,12 +186,6 @@ vnoremap ˚ :m '<-2<CR>gv=gv
 set completeopt-=preview
 " For html tags it auto adds htmlend tags
 inoremap <buffer> > ></<C-x><C-o><C-y><C-o>%<CR><C-o>O
-
-" Easy split navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
 
 " tab shortcuts {{{
 nnoremap tn :tabnew<CR>
