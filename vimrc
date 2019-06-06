@@ -1,3 +1,4 @@
+let &shell="/bin/bash --login"
 let mapleader = ","
 set nocompatible
 "map escape key to jj 
