@@ -130,6 +130,7 @@ Plug 'AndrewRadev/linediff.vim'
 Plug 'tpope/vim-surround'
 Plug 'TaDaa/vimade'
 Plug 'pakutoma/toggle-terminal'
+Plug 'ap/vim-css-color'
 call plug#end()
 
 " }}}
