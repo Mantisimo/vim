@@ -179,6 +179,7 @@ let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
 " }}}
 
+
 " Shortcuts for moving up and down {{{
 nnoremap ∆ :m .+1<CR>==
 nnoremap ˚ :m .-2<CR>==
@@ -231,16 +232,6 @@ tnoremap ≤ : <C-\><C-n>bp<cr>
 tnoremap ≥ : <C-\><C-n>bn<cr>
 nnoremap ≤ : bp<cr>
 nnoremap ≥ : bn<cr>
-
-"replaced default delete mapping to actually delete and not cut
-nnoremap x "_x
-nnoremap d "_d
-nnoremap D "_D
-vnoremap d "_d
-"made it do cutting is done with the leader key by default
-nnoremap <leader>d ""d
-nnoremap <leader>D ""D
-vnoremap <leader>d ""d
 
 tnoremap <silent> <leader>t <C-w><C-p>:ToggleTerminal<CR>
 nnoremap <silent> <leader>t : ToggleTerminal<CR>
