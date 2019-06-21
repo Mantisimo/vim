@@ -155,6 +155,9 @@ autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
 autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
+" Emmet, auto complete with tab
+autocmd FileType html imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 map <silent> <esc> :noh<cr>
 " Ignores fuzzy searching of node_modules and git folders
@@ -186,8 +189,6 @@ vnoremap ˚ :m '<-2<CR>gv=gv
 " }}}
 "
 set completeopt-=preview
-" For html tags it auto adds htmlend tags
-inoremap <buffer> > ></<C-x><C-o><C-y><C-o>%<CR><C-o>O
 
 " tab shortcuts {{{
 nnoremap tn :tabnew<CR>
