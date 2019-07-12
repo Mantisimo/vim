@@ -167,7 +167,7 @@ autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 " Emmet, auto complete with tab
-autocmd FileType html imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+"autocmd FileType html imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 map <silent> <esc> :noh<cr>
 " Ignores fuzzy searching of node_modules and git folders
