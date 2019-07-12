@@ -261,6 +261,7 @@ nnoremap <esc><esc>: <c-w><c-p>
 nnoremap rt : rightb vert term<cr>
 " set your favorite shell
 let g:toggle_terminal#command = ''
+let g:toggle_terminal#position = 'belowright'
 
 let g:vimade = {
   \ "normalid": '',
