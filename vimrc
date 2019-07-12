@@ -130,6 +130,8 @@ Plug 'AndrewRadev/linediff.vim'
 Plug 'tpope/vim-surround'
 Plug 'TaDaa/vimade'
 Plug 'pakutoma/toggle-terminal'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 call plug#end()
 
 " }}}
@@ -271,3 +273,8 @@ let g:vimade = {
   \}
 
 autocmd TerminalOpen * if bufwinnr('') > 0 | setlocal nobuflisted | endif
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
