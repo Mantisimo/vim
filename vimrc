@@ -140,8 +140,8 @@ call plug#end()
 " Plugin settings 
 "let g:OmniSharp_server_use_mono = 1
 let g:OmniSharp_server_stdio = 1
-let g:OmniSharp_proc_debug = 1
-let g:OmniSharp_loglevel = 'debug'
+"let g:OmniSharp_proc_debug = 1
+"let g:OmniSharp_loglevel = 'debug'
 let g:OmniSharp_server_loading_timeout = 5
 
 let g:airline_powerline_fonts = 1
