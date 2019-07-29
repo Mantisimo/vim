@@ -252,8 +252,8 @@ nnoremap <Leader>7 :7b<CR>
 nnoremap <Leader>8 :8b<CR>
 nnoremap <Leader>9 :9b<CR>
 nnoremap <Leader>0 :10b<CR>
-nnoremap <Leader>q :bd<CR>
-nnoremap <Leader>qe :bd!<CR>
+nnoremap <Leader>q :bp\|bd#<CR>
+nnoremap <Leader>qe :bp\|bd#!<CR>
 
 tnoremap <silent> <leader>t <C-w><C-p>:ToggleTerminal<CR>
 nnoremap <silent> <leader>t : ToggleTerminal<CR>
