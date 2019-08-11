@@ -134,6 +134,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'OmniSharp/Omnisharp-vim'
 Plug 'Mantisimo/ultisnip-mantisimo'
+Plug 'jvanja/vim-bootstrap4-snippets'
 call plug#end()
 
 " }}}
