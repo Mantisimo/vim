@@ -1,0 +1,23 @@
+[user]
+	name = kevin
+	email = kmilward@tidalzone.co.uk
+[diff]
+	tool = winmerge
+[difftool "winmerge"]
+	cmd = \"C:\\\\Program Files (x86)\\\\WinMerge\\\\WinMergeU\" $LOCAL $REMOTE
+[difftool]
+	prompt = false
+
+[merge]
+    tool = winmerge
+[mergetool "winmerge"]
+    cmd = \"C:\\\\Program Files (x86)\\\\WinMerge\\\\WinMergeU\" $BASE $LOCAL $REMOTE $MERGED
+[alias]
+    ch = checkout
+    co = commit
+    st = status
+    br = branch
+    mt = mergetool
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -10
+    lgf = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    phead = push origin head
