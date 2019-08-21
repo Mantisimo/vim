@@ -8,3 +8,7 @@ vim()
     command vim "$@"
     stty "$STTYOPTS"
 }
+
+source ~/.git-prompt.sh
+PS1='\w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
+
