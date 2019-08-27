@@ -294,3 +294,10 @@ let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 autocmd FileType typescript nmap <buffer> <Leader>T : <C-u>echo tsuquyomi#hint()<CR>
+
+" close all buffers except this one
+nnoremap <silent> <leader>o :%bd\|e#<cr>
+" Toggles line wrap
+nnoremap <silent> <leader>w :set wrap!<cr>
+nnoremap <silent> <leader>l :set invnumber<cr>
+
