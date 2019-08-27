@@ -300,4 +300,6 @@ nnoremap <silent> <leader>o :%bd\|e#<cr>
 " Toggles line wrap
 nnoremap <silent> <leader>w :set wrap!<cr>
 nnoremap <silent> <leader>l :set invnumber<cr>
+" Focus nerd tree
+nnoremap <silent> <leader>L :NERDTreeFind<cr>
 
