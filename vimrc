@@ -307,3 +307,5 @@ nnoremap <silent> ZA :qa<CR>
 " Quit all diff, exits with non zero, causes git difftool or mergetool to stop
 " looking at other files
 nnoremap <silent> ZD :cq<CR>
+" Show gstatus for stages and unstages files
+nnoremap <silent> <leader>G :Gstatus<CR>
