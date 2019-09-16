@@ -302,4 +302,8 @@ nnoremap <silent> <leader>w :set wrap!<cr>
 nnoremap <silent> <leader>l :set invnumber<cr>
 " Focus nerd tree
 nnoremap <silent> <leader>L :NERDTreeFind<cr>
-
+" Quit all
+nnoremap <silent> ZA :qa<CR>
+" Quit all diff, exits with non zero, causes git difftool or mergetool to stop
+" looking at other files
+nnoremap <silent> ZD :cq<CR>
