@@ -173,10 +173,7 @@ autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 map <silent> <esc> :noh<cr>
 " Ignores fuzzy searching of node_modules and git folders
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-let g:ctrlp_extensions = ['tag']
-" CTRLP Search for tags
-nnoremap <leader>. :CtrlPTag<cr>
+let g:ctrlp_custom_ignore = 'build\|dist\|node_modules\|DS_Store\|git'
 
 " Multi_cursor {{{
 let g:multi_cursor_use_default_mapping=0
