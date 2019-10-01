@@ -1,5 +1,6 @@
 let &shell="/bin/bash --login"
 let mapleader = ","
+map <silent> <esc> :noh<cr>
 set nocompatible
 "map escape key to jj 
 imap jj <Esc>
@@ -55,7 +56,7 @@ set number              " show line numbers
 set showcmd             " show command in bottom bar
 "set nocursorline          " highlight current line
 set wildmenu
-"set lazyredraw
+set lazyredraw
 set showmatch           " higlight matching parenthesis
 " }}}
 " Searching {{{
@@ -111,7 +112,6 @@ call plug#begin()
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/syntastic'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'leafgarland/typescript-vim'
@@ -120,7 +120,6 @@ Plug 'mattn/emmet-vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'tpope/vim-fugitive'
 Plug 'quramy/tsuquyomi'
-Plug 'enricobacis/vim-airline-clock'
 Plug 'ervandew/supertab'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'skywind3000/asyncrun.vim'
@@ -135,6 +134,7 @@ Plug 'honza/vim-snippets'
 Plug 'OmniSharp/Omnisharp-vim'
 Plug 'Mantisimo/ultisnip-mantisimo'
 Plug 'jvanja/vim-bootstrap4-snippets'
+Plug 'terryma/vim-smooth-scroll'
 call plug#end()
 
 " }}}
@@ -145,15 +145,11 @@ let g:OmniSharp_server_stdio = 1
 "let g:OmniSharp_proc_debug = 1
 "let g:OmniSharp_loglevel = 'debug'
 let g:OmniSharp_server_loading_timeout = 5
-
+let g:airline_extensions = ['branch','tabline']
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='dark'
-let g:airline#extensions#hunks#enabled=0
-let g:airline#extensions#branch#enabled=1
-let g:airline#extensions#syntastic#enabled = 1
+"let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline#extensions#tabline#tab_nr_type = 1
+"let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline#extensions#tabline#show_tabs = 1
 "let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
@@ -171,33 +167,9 @@ autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 " Emmet, auto complete with tab
 "autocmd FileType html imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 " <Ctrl-l> redraws the screen and removes any search highlighting.
-map <silent> <esc> :noh<cr>
 " Ignores fuzzy searching of node_modules and git folders
 let g:ctrlp_custom_ignore = 'build\|dist\|node_modules\|DS_Store\|git'
 
-" Multi_cursor {{{
-let g:multi_cursor_use_default_mapping=0
-    " Default mapping
-let g:multi_cursor_start_word_key      = '<C-j>'
-let g:multi_cursor_select_all_word_key = '<A-j>'
-let g:multi_cursor_start_key           = 'g<C-j>'
-let g:multi_cursor_select_all_key      = 'g<A-j>'
-let g:multi_cursor_next_key            = '<C-j>'
-let g:multi_cursor_prev_key            = '<C-p>'
-let g:multi_cursor_skip_key            = '<C-x>'
-let g:multi_cursor_quit_key            = '<Esc>'
-" }}}
-
-
-" Shortcuts for moving up and down {{{
-nnoremap ∆ :m .+1<CR>==
-nnoremap ˚ :m .-2<CR>==
-inoremap ∆ <Esc>:m .+1<CR>==gi
-inoremap ˚ <Esc>:m .-2<CR>==gi
-vnoremap ∆ :m '>+1<CR>gv=gv
-vnoremap ˚ :m '<-2<CR>gv=gv
-" }}}
-"
 set completeopt-=preview
 
 " tab shortcuts {{{
@@ -229,7 +201,6 @@ map <leader>rl :source $MYVIMRC<CR>
 map <leader>ev :e $MYVIMRC<CR>$gf
 map <leader>s :w<CR>
 tnoremap <esc>  <C-w><C-p>
-"tnoremap <esc>: <c-\><c-n>:
 tnoremap <esc>: <C-w><C-p>
 "shift alt + greater less than keys
 tnoremap ¯ : tabprevious<cr>
@@ -306,3 +277,5 @@ nnoremap <silent> ZA :qa<CR>
 nnoremap <silent> ZD :cq<CR>
 " Show gstatus for stages and unstages files
 nnoremap <silent> <leader>G :Gstatus<CR>
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 1)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 1)<CR>
