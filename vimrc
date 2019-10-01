@@ -279,3 +279,5 @@ nnoremap <silent> ZD :cq<CR>
 nnoremap <silent> <leader>G :Gstatus<CR>
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 1)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 1)<CR>
+autocmd FileType javascript UltiSnipsAddFiletypes javascript-jasmine-arrow
+autocmd FileType typescript UltiSnipsAddFiletypes javascript-jasmine-arrow
