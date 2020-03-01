@@ -112,7 +112,6 @@ call plug#begin()
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
-Plug 'scrooloose/syntastic'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'leafgarland/typescript-vim'
 Plug 'terryma/vim-multiple-cursors'
@@ -135,6 +134,8 @@ Plug 'OmniSharp/Omnisharp-vim'
 Plug 'Mantisimo/ultisnip-mantisimo'
 Plug 'jvanja/vim-bootstrap4-snippets'
 Plug 'terryma/vim-smooth-scroll'
+Plug 'dense-analysis/ale'
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 call plug#end()
 
 " }}}
@@ -174,6 +175,7 @@ autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 " Ignores fuzzy searching of node_modules and git folders
 let g:ctrlp_custom_ignore = 'build\|dist\|node_modules\|DS_Store\|git'
+let g:ale_set_highlights = 0
 
 set completeopt-=preview
 
