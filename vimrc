@@ -136,6 +136,7 @@ Plug 'jvanja/vim-bootstrap4-snippets'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'dense-analysis/ale'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
 " }}}
