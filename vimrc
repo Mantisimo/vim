@@ -155,6 +155,11 @@ let g:airline#extensions#tabline#show_tabs = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:asyncrun_open = 8
 
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 1
+
+
+
 map <leader>n :NERDTreeToggle<CR>
 map <silent> <C-n> :NERDTreeFocus<CR>
 map <c-f> :call JsBeautify()<cr>
