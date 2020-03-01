@@ -114,7 +114,6 @@ Plug 'kien/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'leafgarland/typescript-vim'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'mattn/emmet-vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'tpope/vim-fugitive'
@@ -232,7 +231,6 @@ nnoremap <Leader>9 :9b<CR>
 nnoremap <Leader>0 :10b<CR>
 nnoremap <Leader>b :b<Space>
 nnoremap <Leader>q :bp\|bd#<CR>
-nnoremap <Leader>qe :bp\|bd#!<CR>
 
 tnoremap <silent> <leader>t <C-w><C-p>:ToggleTerminal<CR>
 nnoremap <silent> <leader>t : ToggleTerminal<CR>
