@@ -175,6 +175,12 @@ autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 " Ignores fuzzy searching of node_modules and git folders
 let g:ctrlp_custom_ignore = 'build\|dist\|node_modules\|DS_Store\|git'
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_open_multiple_files = 'r'
+let g:ctrlp_open_new_file = 'r'
+let g:ctrlp_arg_map = 'r'
+let g:ctrlp_use_caching = 0
+
 let g:ale_set_highlights = 0
 
 set completeopt-=preview
